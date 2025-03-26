@@ -59,7 +59,7 @@ mensajes = Mensajes(mensajes = [
 
 # Crear agentes
 agentes = [
-    Agente(1, "experto"),
+    Agente(1, "profesional"),
     Agente(2, "intermedio"),
     Agente(3, "basico"),
 ]
