@@ -11,7 +11,7 @@ class Agente:
         factor = {
             "basico": 1.0,
             "intermedio": 0.75,
-            "experto": 0.5
+            "profesional": 0.5
         }.get(self.nivel_experiencia.lower(), 1.0)
 
         return base * factor
