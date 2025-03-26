@@ -117,6 +117,3 @@ mensajes = [
     "¿Qué estrategias se están implementando para garantizar la sostenibilidad de las operaciones?"
 ]
 
-
-q = Mensajes(mensajes)
-q.clasificacion_de_mensajes()

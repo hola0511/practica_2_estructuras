@@ -11,12 +11,12 @@ def simular_atencion(agentes: list[Agente], mensajes_obj: Mensajes):
                     mensaje = mensajes_obj.mensajes.pop(0)
                     agente.estado = "ocupado"
                     tiempo = agente.calcular_tiempo_respuesta(mensaje, prioridad)
-                    print(f"\n👨‍💻 [Agente {agente.id}] Atendiendo mensaje con prioridad {prioridad}...")
+                    print(f"\n [Agente {agente.id}] Atendiendo mensaje con prioridad {prioridad}...")
                     time.sleep(tiempo)
-                    print(f"✅ [Agente {agente.id}] Finalizó atención.\n")
+                    print(f" [Agente {agente.id}] Finalizó atención.\n")
                     agente.estado = "disponible"
                 except EmptyQueue:
                     continue
         time.sleep(1)
 
-    print("🎉 Todos los mensajes han sido atendidos.")
+    print("Todos los mensajes han sido atendidos.")
