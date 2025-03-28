@@ -1,8 +1,8 @@
 class Agente:
     def __init__(self, id: int, nivel_experiencia: str):
-        self.id = id
-        self.nivel_experiencia = nivel_experiencia
-        self.estado = "disponible"
+        self.id: int = id
+        self.nivel_experiencia: str = nivel_experiencia
+        self.estado: str = "disponible"
 
     def calcular_tiempo_respuesta(self, mensaje: str, prioridad: float) -> float:
         longitud = len(mensaje.split())

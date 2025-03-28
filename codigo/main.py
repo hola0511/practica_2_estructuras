@@ -57,11 +57,13 @@ mensajes = Mensajes(mensajes = [
     "¿Qué estrategias se están implementando para garantizar la sostenibilidad de las operaciones?"
 ])
 
-# Crear agentes
 agentes = [
     Agente(1, "profesional"),
     Agente(2, "intermedio"),
     Agente(3, "basico"),
+    Agente(4, "profesional"),
+    Agente(5, "basico"),
+    Agente(6, "intermedio")
 ]
 
 # Procesar mensajes y simular atención
