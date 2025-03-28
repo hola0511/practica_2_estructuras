@@ -3,7 +3,6 @@ from agentes import Agente
 from procesador import iniciar_procesamiento
 from simulador import simular_atencion
 
-# Crear objeto de Mensajes (ya con la lista cargada en __init__)
 mensajes = Mensajes(mensajes = [
     "¿Cuál es el plan para reducir los retrasos en las entregas?",
     "El mantenimiento de la flota se está retrasando, ¿qué medidas se tomarán?",
@@ -66,7 +65,6 @@ agentes = [
     Agente(6, "intermedio")
 ]
 
-# Procesar mensajes y simular atención
 iniciar_procesamiento(mensajes)
 simular_atencion(agentes, mensajes)
 
