@@ -31,7 +31,6 @@ class PriorityQueue:
         return len(self.__queue)
 
 
-
 class Mensajes:
 
     def __init__(self, mensajes: list):
@@ -61,4 +60,44 @@ class Mensajes:
                 self.priority.enqueue(contador)
         print(self.priority)
         return contador
+
+    def mayor_grupo(self):
+        if len(self.priority) == 0:
+            return None
+        queue = self.priority._PriorityQueue__queue
+        ocurrencias = {}
+        for num in queue:
+            if num in ocurrencias:
+                ocurrencias[num] += 1
+            else:
+                ocurrencias[num] = 1
+        mas_frecuente = 0
+        frecuencia_maxima = 0
+        for i, f in ocurrencias.items():
+            if f > frecuencia_maxima:
+                mas_frecuente = i
+                frecuencia_maxima = f
+        return mas_frecuente, frecuencia_maxima
+
+    def pug(self):
+        valor_frecuente, frecuencia = self.mayor_grupo()
+
+        if frecuencia == 0:
+            print("No hay mensajes con puntuación.")
+            return
+
+        mensajes_iguales = []
+        for mensaje in self.mensajes:
+            score = 0
+            for clave, valor in self.palabras_clave.items():
+                if clave.lower() in mensaje.lower():
+                    score += valor
+            if score == valor_frecuente:
+                mensajes_iguales.append(mensaje)
+
+        if mensajes_iguales:
+            print("Primer mensaje con puntuación más frecuente:", mensajes_iguales[0])
+            print("Último mensaje con puntuación más frecuente:", mensajes_iguales[-1])
+        else:
+            print("No se encontraron mensajes con la puntuación más frecuente.")
 
