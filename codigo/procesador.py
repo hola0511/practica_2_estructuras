@@ -10,5 +10,4 @@ def iniciar(mensajes_obj: Mensajes):
     mensajes_obj.pug()
     numero, frecuencia = mensajes_obj.mayor_grupo()
     time.sleep(1)
-    print(f"El numero mas repetido fue {numero} y se repite un total de {frecuencia}")
-
+    print(f"El numero mas repetido fue {numero} y se repite un total de {frecuencia} veces")

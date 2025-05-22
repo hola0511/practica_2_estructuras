@@ -38,7 +38,7 @@ class Mensajes:
         self.palabras_clave: dict = {}
         self.priority: PriorityQueue = PriorityQueue("max")
 
-    def clasificacion_de_mensajes(self, contador: int = 0):
+    def clasificacion_de_mensajes(self):
         self.palabras_clave = {
             "Retrasos": 7, "Mantenimiento": 8, "Costo de combustible": 6, "Tráfico": 5,
             "Accidentes": 10, "Desabastecimiento": 9, "Falta de conductores": 8, "Seguridad": 10,

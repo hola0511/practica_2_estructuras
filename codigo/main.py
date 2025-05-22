@@ -42,4 +42,3 @@ agentes = [
 
 iniciar(mensajes)
 simular_atencion(agentes, mensajes)
-
