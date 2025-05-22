@@ -1,13 +1,12 @@
 from control_mensajes import Mensajes
 from agentes import Agente
-from procesador import iniciar_procesamiento
+from procesador import iniciar
 from simulador import simular_atencion
 
 mensajes = Mensajes(mensajes = [
     "¿Cuál es el plan para reducir los retrasos en las entregas?",
     "El mantenimiento de la flota se está retrasando, ¿qué medidas se tomarán?",
     "¿Cómo podemos reducir el costo de combustible en las rutas más largas?",
-
     "La competencia está afectando nuestra cuota de mercado, ¿cómo podemos mejorar?",
     "¿Qué iniciativas se están implementando para reducir los costos de seguro?",
     "¿Qué impacto tendrá la sostenibilidad en los procesos de distribución?",
@@ -41,6 +40,6 @@ agentes = [
     Agente(6, "intermedio")
 ]
 
-iniciar_procesamiento(mensajes)
+iniciar(mensajes)
 simular_atencion(agentes, mensajes)
 
